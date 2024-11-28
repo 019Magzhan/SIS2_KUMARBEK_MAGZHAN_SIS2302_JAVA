@@ -1,37 +1,44 @@
 public class Student {
+    private int id;
     private String name;
-    private double currentScholarship;
+    private String group;
+    private double Scholarship;
+    private double gpa;
+    private String faculty;
     private double newScholarship;
 
-    public Student(String name, double currentScholarship, double newScholarship) {
+    public Student(int id,String name, String group,double Scholarship,double gpa, String faculty, double newScholarship) {
+        this.id=id;
         this.name = name;
-        this.currentScholarship = currentScholarship;
-        this.newScholarship = newScholarship;
+        this.group=group;
+        this.Scholarship = Scholarship;
+        this.gpa=gpa;
+        this.faculty=faculty;
+        this.newScholarship=newScholarship;
     }
-
+public Integer getId(){
+        return id;
+}
     public String getName() {
         return name;
     }
-
-    public double getCurrentScholarship() {
-        return currentScholarship;
+    public String getGroup(){
+        return group;
     }
 
-    public double getNewScholarship() {
+    public double getScholarship() {
+        return Scholarship;
+    }
+
+    public double getGpa(){
+        return gpa;
+    }
+
+    public String getFaculty(){
+        return faculty;
+    }
+    public double getNewScholarship(){
         return newScholarship;
     }
-
-    public double getScholarshipIncrease() {
-        return newScholarship - currentScholarship;
-    }
-
-    public void displayScholarshipInfo() {
-        System.out.println("Student: " + name);
-        System.out.println("Current Scholarship: " + currentScholarship);
-        System.out.println("New Scholarship: " + newScholarship);
-        System.out.println("Scholarship Increase: " + getScholarshipIncrease());
-        System.out.println();
-    }
-
 }
 
